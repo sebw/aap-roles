@@ -1,0 +1,12 @@
+---
+# tasks file for mxout
+
+- name: Make sure sendmail is not installed
+  dnf:
+    name: sendmail
+    state: absent
+
+- name: install Postfix package
+  dnf:
+    name: postfix
+    state: installed

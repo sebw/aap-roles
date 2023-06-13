@@ -1,0 +1,8 @@
+---
+- name: A full workflow that will call multiple roles
+  hosts: all
+  gather_facts: false
+
+  tasks:
+  - ansible.builtin.include_role:
+      name: mxout
