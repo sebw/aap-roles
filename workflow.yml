@@ -1,5 +1,5 @@
 ---
-- name: A full workflow that will call multiple roles
+- name: A playbook that will call multiple roles
   hosts: all
 
   # Gather facts needed to retrieve hostname
@@ -19,4 +19,4 @@
 
   - name: call resolver role
     ansible.builtin.include_role:
-      name: resolver
+      name: resolvconf
