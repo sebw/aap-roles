@@ -12,8 +12,11 @@ https://galaxy.ansible.com/docs/contributing/creating_role.html
 
 ## Howto
 
-ansible-galaxy init mxout
+Create the directory structure for a role:
 
+`ansible-galaxy init mxout`
+
+```bash
 tree -d --matchdirs mxout
 mxout
 ├── defaults
@@ -24,6 +27,7 @@ mxout
 ├── templates
 ├── tests
 └── vars
+```
 
 
 

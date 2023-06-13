@@ -1,0 +1,28 @@
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+
+myhostname = {{ ansible_hostname }}
+mydestination = $myhostname, localhost.$mydomain, localhost
+
+smtpd_banner = Postfix running on {{ ansible_hostname }}
+
+relayhost = [{{ nexthop }}]:{{ nexthop_port }}
+
+inet_interfaces = localhost
+inet_protocols = ipv4
+
+mynetworks = 127.0.0.0/8
+
+queue_directory = /var/spool/postfix
+
+biff = no
+append_dot_mydomain = no
+
+command_directory = /usr/sbin
+data_directory = /var/lib/postfix
+
+daemon_directory = /usr/libexec/postfix
+
+mail_owner = postfix
+
+readme_directory = no

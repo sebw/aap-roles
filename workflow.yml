@@ -3,6 +3,11 @@
   hosts: all
   gather_facts: false
 
+  vars:
+    nexthop: somethingiwilloverride.example.org
+    nexthop_port: 2525
+
   tasks:
-  - ansible.builtin.include_role:
+  - name: call roles
+    ansible.builtin.include_role:
       name: mxout

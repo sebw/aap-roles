@@ -1,2 +1,3 @@
 ---
-# defaults file for mxout
+nexthop: defaut.example.org
+nexthop_port: 25
