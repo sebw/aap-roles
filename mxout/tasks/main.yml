@@ -2,11 +2,24 @@
 # tasks file for mxout
 
 - name: Make sure sendmail is not installed
-  dnf:
+  ansible.builtin.dnf:
     name: sendmail
     state: absent
 
-- name: install Postfix package
-  dnf:
+- name: Install Postfix package
+  ansible.builtin.dnf:
     name: postfix
     state: installed
+
+- name: Configure Postfix
+  ansible.builtin.template:
+    src: main.cf.j2
+    dest: /etc/postfix/main.cf
+    mode: '0644'
+
+- name: Start Postfix
+  ansible.builtin.service:
+    name: postfix
+    state: started
+    enabled: yes
+  
