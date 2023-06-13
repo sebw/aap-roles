@@ -16,6 +16,7 @@
     src: main.cf.j2
     dest: /etc/postfix/main.cf
     mode: '0644'
+  notify: restart_postfix
 
 - name: Start Postfix
   ansible.builtin.service:

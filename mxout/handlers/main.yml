@@ -1,2 +1,6 @@
 ---
 # handlers file for mxout
+- name: restart_postfix
+  ansible.builtin.service:
+    name: postfix
+    state: restarted
