@@ -35,4 +35,19 @@ The `templates` folder contains configuration templates. Some variables require 
 
 The `tasks` folder contains the playbook calling the roles. Variables can be defined there, but we ultimately override variables with extra variables in Ansible Automation Platform.
 
+When you are happy with your role, you can start using it in a playbook.
 
+```yaml
+  tasks:
+  - name: call mxout role
+    ansible.builtin.include_role:
+      name: mxout
+```
+
+Variables can be specified in multiple locations (AAP, defaults folder of the role, vars in the playbook, on a host variable, on a group variable, etc.). There are 22 ways to declare variables, be smart and keep things simple!
+
+## Ansible development workflows
+
+There are many possible workflows and it is possible to use multiple tools to develop Ansible content (ansible-navigator, ansible-playbook, AWX, AAP, etc.).
+
+One possibility is to write your code, commit your changes to a Git repository and testing your changes directly in Ansible Automation Platform against a test inventory.
