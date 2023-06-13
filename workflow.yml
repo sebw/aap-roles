@@ -1,7 +1,9 @@
 ---
 - name: A full workflow that will call multiple roles
   hosts: all
-  gather_facts: false
+
+  # Gather facts needed to retrieve hostname
+  gather_facts: true
 
   vars:
     nexthop: somethingiwilloverride.example.org
