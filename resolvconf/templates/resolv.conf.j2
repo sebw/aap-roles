@@ -1,0 +1,8 @@
+# Managed by AAP
+
+search {{ searchdomain }}
+nameserver {{ resolver1 }}
+
+{% if resolver2 %}
+nameserver {{ resolver2 }}
+{% endif %}

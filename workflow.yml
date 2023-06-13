@@ -8,8 +8,15 @@
   vars:
     nexthop: somethingiwilloverride.example.org
     nexthop_port: 2525
+    searchdomain: mysubdomain.example.org
+    resolver1: 8.8.8.8
+    resolver2: 8.8.4.4
 
   tasks:
-  - name: call roles
+  - name: call mxout role
     ansible.builtin.include_role:
       name: mxout
+
+  - name: call resolver role
+    ansible.builtin.include_role:
+      name: resolver

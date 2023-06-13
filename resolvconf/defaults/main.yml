@@ -1,0 +1,4 @@
+---
+searchdomain: example.org
+resolver1: 1.1.1.1
+resolver2: 1.0.0.1
