@@ -29,5 +29,10 @@ mxout
 └── vars
 ```
 
+Explore the role structure, the `defaults` folder contain default variables that can be overriden at any time.
+
+The `templates` folder contains configuration templates. Some variables require to gather the machine facts with `gather_facts: true` in the playbook calling the role.
+
+The `tasks` folder contains the playbook calling the roles. Variables can be defined there, but we ultimately override variables with extra variables in Ansible Automation Platform.
 
 
