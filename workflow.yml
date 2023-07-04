@@ -1,5 +1,5 @@
 ---
-- name: A playbook that will call multiple roles
+- name: A playbook that will call multiple ROLES
   hosts: all
 
   # Gather facts needed to retrieve hostname
